@@ -13,13 +13,13 @@ class App extends Component {
   };
 
   onLeaveFeedback = (type) => {
-    console.log(type);
+
    this.setState((prev) => ({ [type]: prev[type] + 1 }));
-   console.log(this.state);
+
   };
 
   countTotalFeedback = () => {
-    console.log(this.state);
+
     return (this.state.good + this.state.neutral + this.state.bad);
   };
 
@@ -33,7 +33,6 @@ class App extends Component {
     const onLeaveFeedback = this.onLeaveFeedback;
     const total = this.countTotalFeedback();
     const positive =this.countPositiveFeedbackPercentage();
-    console.log(total);
     return (
       <>
         <Section title="Please leave feedback">
